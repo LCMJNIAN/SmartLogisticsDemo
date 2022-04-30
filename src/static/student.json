@@ -1,0 +1,14 @@
+[
+    {"stuId":1,"stuName":"李华","stuSex":"男","stuAge":20},
+    {"stuId":2,"stuName":"张国伟","stuSex":"男","stuAge":22},
+    {"stuId":3,"stuName":"刘艳","stuSex":"女","stuAge":19},
+    {"stuId":4,"stuName":"李小燕","stuSex":"女","stuAge":22},
+    {"stuId":5,"stuName":"张鹏","stuSex":"男","stuAge":26},
+    {"stuId":6,"stuName":"李晔","stuSex":"女","stuAge":20},
+    {"stuId":7,"stuName":"钱国强","stuSex":"男","stuAge":21},
+    {"stuId":8,"stuName":"张三","stuSex":"男","stuAge":22},
+    {"stuId":9,"stuName":"唐毓民","stuSex":"男","stuAge":25},
+    {"stuId":10,"stuName":"玛丽亚","stuSex":"女","stuAge":21},
+    {"stuId":11,"stuName":"李家明","stuSex":"男","stuAge":21}
+  ]
+ 

@@ -1,27 +1,51 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 Vue.use(VueRouter)
-
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
-
 const router = new VueRouter({
-  routes
-})
+  routes: [
+    {
+      path: '/',
+      name: '',
+      redirect:'/index'
+      
+    },
+    {
+      path:'/',
+      component:resolve => require(['../components/Home.vue'], resolve),
+      
+      children:[
+        {
+          path:'/index',
+          component:resolve => require(['../components/Index.vue'],resolve),
+          meta:{title:"首页"}
+        },
+        {
+          path:'/job',
+          component:resolve => require(['../components/Job.vue'],resolve),
+          meta:{title:"岗位招聘"}
+        },
+        {
+          path:'/news',
+          component:resolve => require(['../components/News.vue'],resolve),
+          meta:{title:"新闻传递"}
+        },
+        {
+          path:'/aboutus',
+          component:resolve => require(['../components/AboutUs.vue'],resolve),
+          meta:{title:"联系我们"}
+        },
+        {
+          path:'/center',
+          component:resolve => require(['../components/Center.vue'],resolve),
+          meta:{title:"个人中心"}
+        },
+      ]
+    }
+    
+      ]
+    }
+)
+
 
 export default router
